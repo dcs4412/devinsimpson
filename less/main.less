@@ -1,0 +1,181 @@
+// Imports
+// Note: Compile only main.less file (all other included by this file)
+// Also, edit the addresses of images defined in less file after compiling.
+@import "bootstrap-custom/bootstrap.less";
+@import "extras.less";
+@import "home.less";
+@import "about.less";
+@import "services.less";
+@import "resume.less";
+@import "portfolio.less";
+@import "contact.less";
+@import "responsive.less";
+
+// External Variables
+//------------------------------------
+@theme-color: rgb(21,29,42);
+@margin-bottom: 40px;
+
+
+@social-facebook : #4467b0;
+@social-twitter : #5ad8ff;
+@social-dribbble : #ea4c89;
+@social-deviantart : #5F756F;
+
+body {
+}
+/*
+	HEADER 
+	----------------------------------------
+ */
+.page-head {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0 1px 1px rgba(175, 170, 180, .2);
+	height: 65px;
+	position: fixed;
+	z-index: 999;
+	width: 100%; 
+}
+.site-logo {
+	display: inline-block;
+	float: left;
+	margin-top: 13px;
+	img {
+		max-width: 70%;
+		width: auto;
+	}
+}
+.main-nav {
+	.list-unstyled();
+	float: right;
+	margin-top: 22px;
+	li {
+		display: inline-block;
+		margin-right: 25px;
+	}
+	li:last-child {margin-right: 0;}
+	li > a {
+		font-weight: 800;
+		text-transform: uppercase;
+		display: block;
+		text-shadow: inset 1px 1px rgba(155, 155, 155, .2);
+		&:before {
+			font-size: @font-size-h2;
+		}
+	}
+}
+
+.main-nav .inner-nav {
+	.list-unstyled();
+	position: fixed;
+	height: 100%;
+	background: #fff;
+	right: -70px;	// slide it by class
+	top: 64px;
+	bottom: 0;
+	width: 70px;
+	.transition(.3s right);
+	border-left: 1px solid #eee;
+	box-shadow: -1px 0 0px rgba(175, 170, 180, .1);
+	text-align: center;
+	> li {
+		display: block;
+		width: 100%;
+	}
+	> li > a {
+		color: @text-color;
+		font-size: @font-size-base;
+		border-bottom: 1px solid #eee;
+		display: block;
+		padding: 15px;
+		position: relative;
+		background: #fff;
+		left: 0;
+		&:before {
+			font-size: @font-size-h4;
+			line-height: @line-height-base;
+		}
+		&:hover {
+			background: @theme-color;
+			color: #fff;
+		}
+	}
+
+	> li > a > span {
+		position: absolute;
+		border: 1px solid #eee;
+		right: -100%; top: 0;
+		padding: 20px;
+		font-weight: normal;
+		background: #fff;
+		color: @text-color;
+		height: 100%;
+		line-height: 1.46;
+		display: block;
+		.transition(.25s);
+		z-index: -1;
+	}
+	> li > a:hover > span {
+		right: 100%;
+	}
+}
+
+
+.main-nav .inner-nav.show-nav{
+	right: 0!important;
+}
+
+
+/*
+	FOOTER
+	----------------------------------------
+ */
+.page-foot {
+	width: 100%;
+	background: @theme-color;
+	padding: 20px;
+	color: #fff;
+	.copyright {
+		float: left;
+		margin-top: 26px;
+		text-transform: uppercase;
+	}
+	.socials {
+		.list-unstyled();
+		float: right;
+		margin-top: 20px;
+	}
+	.socials li {
+		float: left;
+		margin-left: 10px;
+		&:last-child {
+			margin-left: none;
+		}
+	}
+	.socials li > a {
+		color: #fff;
+		display: inline-block;
+		padding: 6px 14px;
+		border: 1px solid #fff;
+		.transition(.3s);
+		&:before {
+			line-height: @line-height-base;
+		}
+	}
+	.socials li:nth-child(1) a:hover {
+		background: @social-facebook;
+	}
+	.socials li:nth-child(2) a:hover {
+		background: @social-twitter;
+	}
+	.socials li:nth-child(3) a:hover {
+		background: @social-dribbble;
+	}
+	.socials li:nth-child(4) a:hover {
+		background: @social-deviantart;
+	}
+}
+
+
+

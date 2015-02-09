@@ -1,0 +1,116 @@
+
+/*
+	CONTACT SECTION
+	----------------------------------------
+ */
+.contact {
+	.title {
+		&:extend(.about .author-info .title all);	
+	}
+
+	.contact-form {
+		margin-bottom: @margin-bottom - 15;
+	}
+
+	.contact-form .inputs {
+		position: relative;
+		float: left;
+		margin-bottom: 15px;
+	}
+
+	.contact-form .inputs label[for="message"] {
+		text-transform: uppercase;
+		margin-top: 10px;
+		display: block;
+	}
+	.contact-form .inputs textarea {
+		resize: vertical;
+		border: 1px solid #b2b2b2;
+		width: 100%;
+		&:focus, &:active {
+			outline: none;
+			border: 1px solid @theme-color;
+		}
+	}
+
+	.contact-form .inputs input{
+		border: none;
+		border-bottom: 1px solid #b2b2b2;
+		margin-bottom: 15px;
+		padding-top: 15px;
+		width: 100%;
+		// Placeholder Initialization (see mixins.less)
+		.placeholder(@text-color);
+		&:focus, &:active {
+			outline: none;
+			border-bottom: 1px solid @theme-color;
+		}
+	}
+
+
+	.contact-form .inputs.contact-submit {
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+		input {
+			display: inline-block;
+			border: 1px solid #b2b2b2;
+			color: @theme-color;
+			background: #fff;
+			padding: 12px 30px;
+			text-align: center;
+			width: 200px;
+			.transition(.3s);
+		}
+		input:hover {
+			background: @theme-color;
+			color: #fff;
+			border: 1px solid #fff;
+		}
+	}
+}
+
+
+
+
+@form-error-bg: #fa6573;
+@form-success-bg: #25c872;
+// Form Validation Classes
+// ---------------------------------
+// See this class in javascript section
+span.invalid-error {	// custom message for each input
+	position: relative;
+	background: @form-error-bg;
+	padding: 6px 20px;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: @font-size-base - 2;
+	top: 5px;
+}
+
+.form-success, .form-error {	// error/success message
+	position: relative;
+	margin-top: 5px;
+	display: inline-block!important;
+	padding: 8px 20px;
+	color: #fff;
+	margin-left: 15px;
+
+	&:before {
+		line-height: @line-height-base;
+		position: relative;
+		display: inline-block;
+		left: -8px;
+		top: 2px;
+	}
+}
+
+.form-success {
+	background: @form-success-bg;
+}
+
+.form-error {
+	background: @form-error-bg;
+}
+

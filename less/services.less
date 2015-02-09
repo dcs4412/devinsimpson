@@ -1,0 +1,102 @@
+
+/*
+	SERVICES SECTION
+	----------------------------------------
+ */
+
+.services .serv {
+	.title {
+		&:extend(.about .author-info .title all);
+	}
+	> .desc {
+		margin-bottom: @margin-bottom;
+	}
+
+	// Services Box
+	.serv-box {
+		margin-bottom: @margin-bottom/2;
+		margin-left: -10px;
+		margin-right: -10px;
+		.list-unstyled();
+		> li {
+			padding: 10px;
+		}
+		.box {
+			.transition(.3s);
+			// height: 370px;	// set this height (optional)
+			text-align: center;
+			border: 1px solid #b2b2b2;
+			&:hover {
+				box-shadow: 0 0 8px 1px lighten(@theme-color, 70%);
+			}
+		}
+		.box span.icon:before {
+			font-size: @font-size-h1*2;
+			line-height: @line-height-base;
+			color: @theme-color;
+		}
+
+		.box .head {
+			padding: 14px;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: bold;
+			background: @theme-color;
+		}
+		.box > .desc {
+			padding: 10px 15px;
+		}
+
+	}
+
+}
+
+
+
+
+.services .testimonials {
+		// testimonials
+	&:extend(.about .statistics all);
+	.title:before {left: 48.8%;}
+	// Quotes icon
+	span.quote-icon {
+		display: block;
+		text-align: center;
+		margin-top: 5px;
+	}
+	span.quote-icon:before {
+		font-size: @font-size-h2;
+		line-height: @line-height-base;
+	}
+
+	// testi-lists
+	.testi-list {
+		.list-unstyled();
+		text-align: center;
+		overflow: hidden;
+	}
+	.testi-list .testi .commentor {
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	.arrows {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.arrows > span {
+		border: 1px solid;
+		display: inline-block;
+		padding: 0px 6px;
+		cursor: pointer;
+		.transition(.2s);
+	}
+	.arrows > span:before {
+		line-height: @line-height-base;
+		font-size: @font-size-base + 2;
+	}
+	.arrows > span:hover {
+		background: #fff;
+		color: @theme-color;
+	}
+}

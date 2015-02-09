@@ -1,0 +1,327 @@
+/** Responsive Style **/
+// ------------------------------------
+// (>= 768 && < 992)
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	// About Section
+	.about .extra-info ul {
+		margin-left: 1%;
+	}
+	.about .author-info .info {
+		.desc br {
+			display: none;
+		}
+	}
+
+	// Resume Section 
+	.resume .timeline .group .date {
+		left: 33%;
+	}
+	.resume .timeline .group-alter .date {
+		left: 10%;
+	}
+}
+
+
+
+/**  
+ * For Tablets, iPhones (< 768px)
+ * ------------------------------------------
+ */
+@media screen and (max-width:767px)  {
+	.home .big-head {
+		font-size: @font-size-h1*1.6;
+	}
+	.home .big-head span:before,
+	.home .big-head em:before { 
+		width: 4px;
+		top: 12px;
+		height: 120%;
+	}
+	.home .big-head span:before,
+	.home .big-head span:after {
+		left: -16%;
+	}
+	.home .big-head em:before,
+	.home .big-head em:after {
+		right: -16%;
+	}
+
+	// About Section
+	.about .extra-info {
+		padding-bottom: 10px;
+		ul { margin-left: 14%;}
+		ul > li {
+			margin-bottom: 30px;
+		}
+	}
+	.about .author-info {
+		.info .author-pic img {
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+
+	// Resume Section
+		// Resume Section 
+	.resume .timeline .group .date {
+		left: 30.5%;
+	}
+	.resume .timeline .group-alter .date {
+		left: 10%;
+	}
+
+	.resume .timeline .group .desc-box {
+		h4 {
+			font-size: @font-size-base;
+		}
+		p {
+			font-size: @font-size-base - 1;
+		}
+	}
+}
+
+// For Portfolio section and services only
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .about .extra-info ul {
+    margin-left: 5%;
+  }
+	// Services
+	.services .serv {
+		.serv-box {
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+	}
+	.portfolio .works .filter-port {
+		> li {
+			width: 49.99%; 
+			float: left;
+			display: inline-block;
+		}
+	}
+}
+
+@media screen and (max-width: 480px), 
+screen and (min-width: 481px) and (max-width: 639px){
+	.home .big-head {
+		font-size: @font-size-h1*1.3;
+		span:before, span:after,
+		em:before, em:after  {display: none}
+	}
+	// Resume Section
+		// Resume Section (special styling)
+	.resume .timeline {
+
+		.timeline-cont:before {
+			left: 52px;
+		}
+
+		.timeline-cont .title {
+			text-align: left;
+		}
+
+		// groups 
+		.timeline-cont .group {
+			margin-bottom: @margin-bottom*1.2;
+			position :relative;
+		}
+
+		.group .date {
+			left: 84px;
+			top: 0;
+			padding: 5px 12px;
+			font-weight: normal;
+			font-size: @font-size-base - 2;
+		}
+		.group .point-circle {
+			position: relative;
+			left: 45px;
+			margin: 0;
+			top: 80px;
+		}
+		.group .desc-box {
+			float: left;
+			top: 23px;
+			width: 78%;
+			left: 10px;
+		}
+
+		.group .date:before,
+		.group .date:after {
+			display: none;
+		}
+
+		// Group Alter 
+		.group-alter .date {
+			top: 0;
+			left:84px;
+			position: absolute;
+		}
+
+		.group-alter .desc-box {
+			float: left;
+			left: 83px;
+			top: 39px;
+		}
+
+		.group-alter .desc-box:before,
+		.group-alter .desc-box:after {
+			right: auto;
+		}
+		.group-alter .desc-box:before {
+			left: -7px;
+		}
+		.group-alter .desc-box:after {
+			left: -6px;
+		}
+
+		// End Box
+		.end-box .title {
+			margin-left: 25px;
+		}
+	}
+}
+/**
+ * For Very small Devices (low end )
+ */
+@media screen and (max-width: 480px) {
+	.home .big-head {
+		font-size: @font-size-h1*1.3;
+		span:before, span:after,
+		em:before, em:after  {display: none}
+	}
+
+	// About Section
+	.about .extra-info {
+		ul { margin-left: 8%;}
+		ul > li > span {
+			font-size: @font-size-base - 1;
+		}
+	}
+	.about .author-info .title h2 {
+		font-size: @font-size-h2;
+	}
+	.about .author-info .title h3 {
+		font-size: @font-size-h3 - 2;
+	}
+
+
+	// footer
+	.page-foot {
+		margin: 0 auto;
+		text-align: center;
+		padding: 15px!important;
+	}
+	.page-foot .copyright {
+		width: 100%;
+		margin-top: 15px!important;
+	}
+	.page-foot .socials {
+		width: 100%;
+		margin-top: 15px!important;
+	}
+	.page-foot .socials li {
+		float: none!important;
+		display: inline-block!important;
+		margin-left:0px!important;
+	}
+	.page-foot .socials li > a {
+		padding: 5px 12px;
+	}
+
+
+}
+
+@media screen and (max-width: 340px),
+screen and (max-device-width: 340px) and (-webkit-device-pixel-ratio: 2) { /* +20 for normalizing across various mobile devices */
+	body {font-size: @font-size-base - 1;}
+	// Home Section
+	.home .big-head {
+		font-size: @font-size-h1;
+	}
+	.home .text-sub {font-size: @font-size-base - 2;}
+
+	.home .cv-btn > a {
+		padding: 16px 32px;
+		font-size: @font-size-base - 2;
+	}
+	.home .learn-more > a {
+		font-size: @font-size-base - 2;
+		&:before {
+			font-size: @font-size-base*1.4;
+			right: 40%;
+			bottom: -40px;
+		}
+	}
+
+	// about section
+	.about .extra-info {
+		padding-bottom: 0;
+		ul { margin-left: 0;}
+		ul > li {padding-left: 15px}
+		ul > li > span {
+			white-space: pre;
+			font-size: @font-size-base - 2;
+		}
+	}
+	.about .author-info .title {margin-bottom: 15px}
+
+	.about .author-info .title h2 {
+		font-size: @font-size-h2 - 4;
+		padding-bottom: 0;
+	}
+	.about .author-info .title h3 {
+		font-size: @font-size-h3 - 6;
+		span {font-size: @font-size-h2 - 5;}
+	}
+
+
+	.about .statistics {
+		.desc {font-size: @font-size-base - 1}
+		.desc span.num {font-size: @font-size-h1;}
+	}
+
+	// Resume Section
+	.resume .timeline {
+
+		.timeline-cont:before {
+			left: 22px;
+		}
+		.group .date {
+			left: 60px;
+			top: 0;
+		}
+		.group .point-circle {
+			left: 15px;
+			top: 82px;
+		}
+		.group .desc-box {
+			top: 13px;
+			left: 60px;
+		}
+		// Group Alter 
+		.group-alter .date {
+			left:60px;
+		}
+		.group-alter .desc-box {
+			left: 60px;
+			top: 39px;
+		}
+		// End Box
+		.end-box .title {
+			margin-left: 5px;
+		}
+	}
+
+	.resume .skills .chart {
+		width: 100%;
+	}
+
+	.portfolio .works .filter-port li > figure > img {
+		.size(100%; 100%);
+	}
+
+}
+
+
+

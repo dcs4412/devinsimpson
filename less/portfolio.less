@@ -1,0 +1,134 @@
+/*
+	PORTFOLIO SECTION
+	----------------------------------------
+ */
+
+// works
+.portfolio .works {
+	.title {
+		&:extend(.about .author-info .title all);	
+	}
+
+	.desc {
+		margin-bottom: @margin-bottom;
+	}
+	.filter-menu {
+		margin-left: 0px;
+		margin-bottom: 20px;
+		.list-unstyled();
+		li {
+			display: inline-block;
+			position: relative;
+			letter-spacing: -3px;
+
+		}
+		li a {
+			color: @theme-color;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: inline-block;
+			letter-spacing: 1px;	
+			margin: 0 8px;
+			.transition(.3s);
+			&:hover {
+				color: lighten(@theme-color, 20%);
+				border-bottom: 2px solid lighten(@theme-color, 20%);
+			}
+		}
+		li a.filter-current {
+			border-bottom: 2px solid @theme-color;
+		}
+	}
+
+	.filter-port {
+		.list-unstyled();
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: @margin-bottom;
+		li {
+			padding: 4px;
+		}
+		li > figure {
+			border: 1px solid #eee;
+			position: relative;
+		}
+		// li > figure > img {
+		// 	.size(100%; 100%);
+		// }
+
+		li > figure a{
+			position: absolute;
+			top: 0; left: 0;
+			.size(100%; 100%);
+			background: rgba(25,31,43,.95);
+			color: #fff;	
+			text-align: center;
+			text-transform: uppercase;
+			padding-top: 28%;
+			opacity: 0;
+			.transition(.3s);
+			font-weight: bold;
+			> span {
+				display: block;
+				text-transform: none;
+				font-weight: normal;
+			}
+			> span em {
+				display: inline-block;
+				font-style: normal;
+				position: relative;
+			}
+			> span em:before, > span em:after {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 1px;
+				background: #fff;
+				top: 49.9%;
+			}
+			> span em:before {
+				left: -28px;
+			}
+			> span em:after {
+				right: -28px;
+			}
+		}
+		> li figure:hover a {
+			opacity: 1;
+		}
+
+			
+	}
+
+}
+
+
+
+/* ---- For Isotope Plugin --------
+ ---------------------------------- */
+
+.isotope,
+.isotope .item {
+  /* change duration value to whatever you like */
+  .transition-duration(.8s);
+}
+
+.isotope {
+  -webkit-transition-property: width, height;
+     -moz-transition-property: width, height;
+       	  transition-property: width, height;
+}
+
+.isotope .item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+       	  transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+ 	.transition-duration(0s);
+}
