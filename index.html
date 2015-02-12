@@ -128,54 +128,62 @@
 			<div class="timeline container">
 				<header class="title">
 					<h2>Resume</h2>
-					<h3><span>/</span>My entire career</h3>
+					<h3><span>/</span>My academic career</h3>
 				</header>	
 
-				<div class="education timeline-cont clearfix">
-					<span class="title"><strong>Education</strong></span>
+				<div class="java timeline-cont clearfix">
+					<span class="title"><strong>Java Projects</strong></span>
 					<div class="group group-1 clearfix">
-						<span class="date">May 04</span>
+						<span class="date">Spring 2011</span>
 						<span class="point-circle"></span>
 						<div class="desc-box">
-							<h4>Bachelor, Computer Science</h4>
-							<span class="sub-title">University or North Carolina Wilmington</span>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
+							<h4>Basic Program Builder</h4>
+							<p>This program is designed to help new computer science students learn the basics of how programs are structured in Java. The user can construct classes, methods, variables, and inline comments and export the file to a .java file that will successfully compile. Key words such as Statics and datatypes such as int, double, String, ect... are selected from a list to prevent compilation errors and to show the user a sample of the possible methods and variables that can be created in the format they need to be in. Methods are empty and the exported programs will not do anything at runtime, the point of this program is to demonstrate structure, not functionality. </p>
 						</div>
 					</div>
 
 					<div class="group group-2 group-alter clearfix">
 						<div class="desc-box">
-							<h4>M.Tech, Computer Science</h4>
-							<span class="sub-title">M.I.T</span>
-							<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh.</p>
+							<h4>Scientific Computing Toolset and Matrix Math</h4>
+							<p>This program was built for my Scientific Computing course where I was required to solve a number of matrix math, shortest path, and signal processing problems. All relevant functions are accessed from a command line interface. The Toolkit.java is where most of the methods are written and it is where the command line interface is located.</p>
 						</div>
 						<span class="point-circle"></span>
-						<span class="date">June 08</span>
+						<span class="date">Spring 2013</span>
 					</div> 
-				</div> <!-- End Education -->
+					
+					<div class="group group-2 group-alter clearfix">
+						<div class="desc-box">
+							<h4>Dungeons and Dragons Character Creation Tool</h4>
+							<p>This was a team project where a user creates a valid Dungeons and Dragons 5th edition player character, presenting the user with relevant information on each step of the process and allows the user to print a hard copy of the finalized character sheet. Some attributes of the player characters are customizable, and the software allows users to add custom classes, races, abilities and skills to the system for use by player characters. The software stores the characters on a MySQL database owned by the University of North Carolina at Wilmington and allows for users to retrieve and edit characters at any time. The team consisted of myself and two others Thomas and Victor, I was responsible for building the interface and logic of the panels where the user inputs character information as well as the character sheet printing and preview. Thomas was responsible for building the database functionality and panels the provide the user information during character creation and Victor was reponsible for the panels that allwed users to add custom classes, races, abilities and skills for character creation. This code also includes the SQL file (create_project_tables.sql) that was used to construct all the relations in the database.</p>
+						</div>
+						<span class="point-circle"></span>
+						<span class="date">Fall 2014</span>
+					</div> 
+				</div> <!-- End Java -->
 
-				<div class="experience timeline-cont clearfix">
-					<span class="title"><strong>Experience</strong></span>
+
+				<div class="python timeline-cont clearfix">
+					<span class="title"><strong>Python Projects</strong></span>
 					<div class="group group-1 clearfix">
-						<span class="date">Aug 08</span>
+						<span class="date">Spring 2013</span>
 						<span class="point-circle"></span>
 						<div class="desc-box">
-							<h4>JavaScript Developer</h4>
-							<span class="sub-title">Awesome Company, Ltd.</span>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
+							<h4>Age Progression algorithm validation script</h4>
+							<p>The first major project I built with python was a script designed to quantitatively evaluate the age progression algorithms designed by the Institute for Interdisciplinary Studies in Identity Sciences at the University of North Carolina at Wilmington. The faces of subjects are parameterized and synthesized using Active Appearance Models. Images of subjects at different ages are compared against each other using distance measures between age-progressed parameterizations as well as a similarity score between the two images using facial recognition algorithms. The results of these evaluations are rendered in .pdf graphs using the matplotlib library. The entire script I wrote and used is below.</p>
 						</div>
 					</div>
 
 					<div class="group group-2 group-alter clearfix">
 						<div class="desc-box">
-							<h4>Lead Developer</h4>
-							<span class="sub-title">Ordinary Works, Ltd.</span>
-							<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh.</p>
-						</div>
+							<h4>Three dimensional human facial representation tool set</h4>
+							<p>A continuing Python project I started in school is a 3D human face representation  and manipulation toolset. The system is built with Python 2.7, a QT interface, and OpenGL for 3D rendering. It starts with a template face mesh where every vertex has been selected for a specific facial region in mind (for example any vertex making up the nose of the template face, will make up the nose of any subject face). 3D point clouds taken from scans of human subjects are registered through a landmarking procedure and 1040 vertices (the number of vertices that make up the template mesh) that best summarize the face shape are taken and used to warp the template mesh into the shape of the subjects face. The lower vertex count allows for easy manipulation, lower processing cost, and better understanding of face structure as all warped vertices belong to known facial regions.</p>
+							</div>
 						<span class="point-circle"></span>
-						<span class="date">Jan 11</span>
+						<span class="date">Spring 2013</span>
 					</div> 
-				</div> <!-- End Experience -->
+					
+					
+				</div> <!-- End Python -->
 
 				<div class="end-box clearfix">
 					<span class="title"><strong>End</strong></span>
