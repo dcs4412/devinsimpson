@@ -4,7 +4,6 @@
 
 // Initialize preloader (dependency imageLoaded plugin)
 // ----------------------------------------------------
-    preloader();
 // Initialize Plugins
 
     var chartOpts = {
@@ -248,6 +247,7 @@ function owlCarouselConfig() {
         owl.trigger("owl.prev");
     });
 }
+
 // Initialization
 owlCarouselConfig();
 
@@ -280,27 +280,6 @@ function mainNavInit() {
 mainNavInit();
 
 
-// Words Rotater 
-// ---------------------------------------------
-function wordsRotaterInit() {
-  $("#words-rotate").textrotator({
-    animation: "dissolve",  // Options are `dissolve, fade, flip, flipUp, flipCube, flipCubeUp and spin.`
-    separator: ",",
-    speed: 2000
-  });
-}
-wordsRotaterInit();
 
-
-
-
-// Preloader (require pace.min.js)
-    function preloader() {
-        $(window).on("load", function() {
-            Pace.on("done",function() {
-                $("#preload").delay(100).fadeOut(500);
-            });
-        });
-    }
 
 })(jQuery);
